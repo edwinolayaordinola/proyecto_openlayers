@@ -1,9 +1,8 @@
-/*body{
-	background: green;
-	margin: 0px;
-	border: 0px;
-  	padding: 0px;
-}*/
+.icono{
+	font-size: 50px;
+	color: #FFFC46;
+
+}
 
 .container{
 	position: relative;
@@ -25,5 +24,7 @@
 	position: absolute;
 	left: 0;
 	bottom: 0;
+	padding: 2px;
+	cursor: pointer;
 	margin: 6px;
 }
