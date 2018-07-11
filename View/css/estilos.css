@@ -1,0 +1,29 @@
+/*body{
+	background: green;
+	margin: 0px;
+	border: 0px;
+  	padding: 0px;
+}*/
+
+.container{
+	position: relative;
+}
+
+.map{
+	/*border: 5px solid red;*/
+	height: 100%;
+	width: 100%;
+	margin: 0px;
+	border: 0px;
+  	padding: 0px;
+  	position: absolute;
+  	/*text-align: center;*/
+}
+
+.btn_ver{
+	z-index: 3;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	margin: 6px;
+}

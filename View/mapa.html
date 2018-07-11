@@ -1,19 +1,33 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <link rel="stylesheet" href="https://openlayers.org/en/v4.6.5/css/ol.css" type="text/css">
-    <style>
-      .map {
-        height: 400px;
-        width: 100%;
-      }
-    </style>
+    <title>OpenLayers3 example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie-edge">  
+    
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.css">
+    
+    <link rel="stylesheet" href="https://openlayers.org/en/v4.6.5/css/ol.css" type="text/css">    
     <script src="https://openlayers.org/en/v4.6.5/build/ol.js" type="text/javascript"></script>
-    <title>OpenLayers example</title>
+
+    <!--script src="/fonts/fontawesome.js" type="text/javascript"></script-->
+    <!--link rel="stylesheet" href="/fonts/fontawesome.css" type="text/css"-->    
+    <script defer src="https://use.fontawesome.com/releases/v5.1.0/js/all.js" integrity="sha384-3LK/3kTpDE/Pkp8gTNp2gR/2gOiwQ6QaO7Td0zV76UFJVhqLl4Vl3KL1We6q6wR9" crossorigin="anonymous"></script>
+    
+    <link rel="stylesheet" href="/css/estilos.css" type="text/css">
+
   </head>
   <body>
-    <h2>My Map</h2>
-    <div id="map" class="map"></div>
+    <div id="container">
+        <div id="map" class="col map"></div>
+        <div class="btn_ver"><i class="fab fa-android"></i></div>
+    </div>
+    <i class="fab fa-android"></i>
+    <!--h2>My Map</h2-->
+    <!--input type="text" id="txtid">
+    <input type="button" value="buscar" id="btnbuscar" onclick="fnbuscar()"-->
+    
     <script type="text/javascript">
 
       var map = new ol.Map({
@@ -23,21 +37,24 @@
           	source: new ol.source.OSM()
           }),
           new ol.layer.Tile({
-            /*source: new ol.source.OSM()*/
             source : new ol.source.TileWMS(
 	            {
 	            	url: 'http://localhost:8080/geoserver/gis_nube/wms'	,
-	            	params : {'LAYERS':'gis_nube:piura_sig_locales_epsgrau','TILED':true}
+	            	params : {'LAYERS':'gis_nube:locales_epsgrau','TILED':true}
 	            }
             )
           })
         ],
-
         view: new ol.View({
           center: ol.proj.fromLonLat([-80.639, -5.194]),
           zoom: 12
         })
       });
     </script>
+
+
+    <script src="/js/jquery-3.3.1.min.js"> </script>
+    <script src="/js/popper.min.js"> </script>
+    <script src="/js/bootstrap.min.js"> </script>
   </body>
 </html>

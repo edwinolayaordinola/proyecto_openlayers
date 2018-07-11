@@ -22,9 +22,6 @@ app.get('/', function(req, res){
 	res.end();
 });
 
-
-
-
 app.listen(3000, function(){
 	console.log("servidor ejecutandose!!!puerto 3000");
 });
